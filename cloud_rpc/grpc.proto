@@ -1,0 +1,16 @@
+syntax = "proto3";  //protobuf3协议
+package cloud_rpc;
+
+message Msg {
+    string JsonData = 1;
+}
+
+service CloudVMService {
+    rpc Create(Msg) returns (Msg);
+    rpc Delete(Msg) returns (Msg);
+}
+
+service CloudDockerService {
+    rpc Create(Msg) returns (Msg);
+    rpc Delete(Msg) returns (Msg);
+}
